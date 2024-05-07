@@ -1,0 +1,16 @@
+def c(n):
+    if n == 0:
+        return c0
+    else:
+        return (c(n - 1) + 12 * m) * (1 + t / 100)
+
+
+print("Calcul du capital acquis")
+
+c0 = int(input("Placement de départ:"))
+m = int(input("Versement mensuel:"))
+t = float(input("Taux annuel:"))
+n = int(input("Nombre d'années:"))
+
+print("Capital acquis :", round(c(n), 2))
+print("Intérets gagnés:", round(c(n) - n * m * 12 - c0, 2))
